@@ -1,0 +1,16 @@
+{% extends 'zeno/base.html' %}
+
+{% block content %}
+  <h2>Zeno By ID</h2>
+  <form method="get">
+    <input type="text" name="zenoid">
+    <button type="submit">Search</button>
+  </form>
+  {% if zeno %}
+    <p>ZenoID: <strong>{{ zeno.zenoid }}</strong></p>
+    <p>Timestamp: <strong>{{ zeno.timestamp }}</strong></p>
+    <p>Temperature: <strong>{{ zeno.temperature }}</strong></p>
+    <p>Duration: <strong>{{ zeno.duration }}</strong></p>
+    <p>URL: <strong>{{ zeno.url }}</strong></p>
+  {% endif %}
+{% endblock %}
